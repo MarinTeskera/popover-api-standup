@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Popover API</h1>
+    </div>
+
+    <section>
+        <h2>Basic use</h2>
+
+        <button popovertarget="myBasicPopover">Toggle the popover</button>
+        <div id="myBasicPopover" popover>
+            <h2>Popover element</h2>
+            <p>This div uses the CSS popover attribute</p>
+            <p>It appears in the top layer (no need for z-index: 9999)</p>
+        </div>
+
+        <button popovertarget="mySecondBasicPopover">Toggle the popover</button>
+        <div id="mySecondBasicPopover" popover>
+            <h2>Second popover element</h2>
+            <p>This div uses the CSS popover attribute</p>
+            <p>It appears in the top layer (no need for z-index: 9999)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Hide/show</h2>
+
+        <button popovertarget="myTogglePopover" popovertargetaction="show">Show the popover</button>
+        <button popovertarget="myTogglePopover" popovertargetaction="hide">Hide the popover</button>
+        <div id="myTogglePopover" popover>
+            <h2>Manual popover</h2>
+            <p>The popover attribute is set to manual</p>
+            <p>Allows nesting popovers</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Manual</h2>
+
+        <button popovertarget="myManualPopover">Toggle the popover</button>
+        <div id="myManualPopover" popover="manual">
+            <button
+                popovertarget="myManualPopover"
+                popovertargetaction="hide">
+                <span aria-hidden=”true”>❌</span>
+            </button>
+            <h2>Manual popover</h2>
+            <p>The popover attribute is set to manual</p>
+            <p>Allows nesting popovers</p>
+
+            <button popovertarget="mySecondManualPopover">Toggle the popover</button>
+        </div>
+
+        <div id="mySecondManualPopover" popover="manual">
+            <button
+                popovertarget="mySecondManualPopover"
+                popovertargetaction="hide">
+                <span aria-hidden=”true”>❌</span>
+            </button>
+
+            <h2>Nested manual popover</h2>
+            <p>Nested inside the first manual popover</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Modal</h2>
+        <p id="instructions">
+            Press "h" to toggle a help screen (select example window first).
+          </p>
+
+          <div id="mypopover" popover>
+            <h2>Help!</h2>
+
+            <span>You can use the following commands to control the app</span>
+
+            <ul>
+              <li>Press <ins>C</ins> to order cheese</li>
+              <li>Press <ins>T</ins> to order tofu</li>
+              <li>Press <ins>B</ins> to order bacon</li>
+            </ul>
+          </div>
+    </section>
+      <script src="./script.js"></script>
+</body>
+
+</html>
