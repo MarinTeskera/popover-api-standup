@@ -14,14 +14,14 @@
     <section>
         <h2>Basic use</h2>
 
-        <button popovertarget="myBasicPopover">Toggle the popover</button>
+        <button popovertarget="myBasicPopover">Toggle first popover</button>
         <div id="myBasicPopover" popover>
             <h2>Popover element</h2>
             <p>This div uses the CSS popover attribute</p>
             <p>It appears in the top layer (no need for z-index: 9999)</p>
         </div>
 
-        <button popovertarget="mySecondBasicPopover">Toggle the popover</button>
+        <button popovertarget="mySecondBasicPopover">Toggle second popover</button>
         <div id="mySecondBasicPopover" popover>
             <h2>Second popover element</h2>
             <p>This div uses the CSS popover attribute</p>
@@ -77,29 +77,34 @@
         <div id="toggleEventPopover" popover>
             <h2>ToggleEvent popover</h2>
             <p>We are using ToggleEvent to read the popover's next state</p>
+            <p>This interface can be used with the beforetoggle and toggle events, which fire when the popover changes state</p>
         </div>
     </section>
 
     <section>
-        <h2>Modal</h2>
-        <span id="instructions">
-            Press "h" to toggle a help screen (select example window first).
-          </span>
+        <h2>Instance methods</h2>
 
-          <div id="mypopover" popover>
-            <h2>Help!</h2>
+        <button id="toggle">Toggle popover</button>
+        <div id="firstInstanceMethodsPopover" popover="manual">
+            <h2>Manual popover</h2>
+            <p>The popover attribute is set to manual</p>
+            <p>Allows nesting popovers</p>
+        </div>
 
-            <span>You can use the following commands to control the app</span>
+        <button id="show">Show the popover</button>
+        <button id="hide">Hide the popover</button>
+        <div id="secondInstanceMethodsPopover" popover>
+            <h2>Manual popover</h2>
+            <p>The popover attribute is set to manual</p>
+            <p>Allows nesting popovers</p>
+        </div>
 
-            <ul>
-              <li>Press <ins>C</ins> to order cheese</li>
-              <li>Press <ins>T</ins> to order tofu</li>
-              <li>Press <ins>B</ins> to order bacon</li>
-            </ul>
-          </div>
+        <button id="hover">Hover over me</button>
+        <div id="thirdInstanceMethodsPopover" popover>
+            <h2>Hover popover</h2>
+        </div>
     </section>
     <script type="module" src="./scripts/index.js"></script>
-    <!-- <script src="./scripts/hover.js"></script> -->
 </body>
 
 </html>

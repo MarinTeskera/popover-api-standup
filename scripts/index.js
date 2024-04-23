@@ -1,2 +1,2 @@
-import "./hover.js";
+import "./instanceMethods.js";
 import "./toggleEvent.js";
