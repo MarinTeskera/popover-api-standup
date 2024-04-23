@@ -71,10 +71,20 @@
     </section>
 
     <section>
+        <h2>ToggleEvent</h2>
+
+        <button popovertarget="toggleEventPopover" popovertargetaction="toggle">This popover is currently <span id="toggleEventPopoverIndicator">closed</span></button>
+        <div id="toggleEventPopover" popover>
+            <h2>ToggleEvent popover</h2>
+            <p>We are using ToggleEvent to read the popover's next state</p>
+        </div>
+    </section>
+
+    <section>
         <h2>Modal</h2>
-        <p id="instructions">
+        <span id="instructions">
             Press "h" to toggle a help screen (select example window first).
-          </p>
+          </span>
 
           <div id="mypopover" popover>
             <h2>Help!</h2>
@@ -88,7 +98,8 @@
             </ul>
           </div>
     </section>
-      <script src="./script.js"></script>
+    <script src="./scripts/hover.js"></script>
+    <script src="./scripts/toggleEvent.js"></script>
 </body>
 
 </html>
