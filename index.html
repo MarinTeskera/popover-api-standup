@@ -30,11 +30,22 @@
     </section>
 
     <section>
+        <h2>Animation</h2>
+
+        <button popovertarget="animatedPopover">Toggle first popover</button>
+        <div id="animatedPopover" class="animated-popover popover" popover>
+            <h2>Popover element</h2>
+            <p>This div uses the CSS popover attribute</p>
+            <p>It appears in the top layer (no need for z-index: 9999)</p>
+        </div>
+    </section>
+
+    <section>
         <h2>Hide/show</h2>
 
         <button popovertarget="myTogglePopover" popovertargetaction="show">Show the popover</button>
         <button popovertarget="myTogglePopover" popovertargetaction="hide">Hide the popover</button>
-        <div id="myTogglePopover" class="popover" popover>
+        <div id="myTogglePopover" class="animated-popover popover" popover>
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
@@ -45,7 +56,7 @@
         <h2>Manual</h2>
 
         <button popovertarget="myManualPopover">Toggle the popover</button>
-        <div id="myManualPopover" class="popover" popover="manual">
+        <div id="myManualPopover" class="animated-popover popover" popover="manual">
             <div class="close-button-container">
                 <button
                     class="close-button"
@@ -61,13 +72,15 @@
             <button popovertarget="mySecondManualPopover">Toggle the popover</button>
         </div>
 
-        <div id="mySecondManualPopover" class="popover" popover="manual">
-            <button
-                class="close-button"
-                popovertarget="mySecondManualPopover"
-                popovertargetaction="hide">
-                <span aria-hidden=”true”>Close</span>
-            </button>
+        <div id="mySecondManualPopover" class="animated-popover popover" popover="manual">
+            <div class="close-button-container">
+                <button
+                    class="close-button"
+                    popovertarget="mySecondManualPopover"
+                    popovertargetaction="hide">
+                    <span aria-hidden=”true”>Close</span>
+                </button>
+            </div>
 
             <h2>Nested manual popover</h2>
             <p>Nested inside the first manual popover</p>
@@ -78,7 +91,7 @@
         <h2>ToggleEvent</h2>
 
         <button popovertarget="toggleEventPopover" popovertargetaction="toggle">This popover is currently <span id="toggleEventPopoverIndicator">closed</span></button>
-        <div id="toggleEventPopover" class="popover" popover>
+        <div id="toggleEventPopover" class="animated-popover popover" popover>
             <h2>ToggleEvent popover</h2>
             <p>We are using ToggleEvent to read the popover's next state</p>
             <p>This interface can be used with the beforetoggle and toggle events, which fire when the popover changes state</p>
@@ -89,7 +102,7 @@
         <h2>Instance methods</h2>
 
         <button id="toggle">Toggle popover</button>
-        <div id="firstInstanceMethodsPopover" class="popover" popover="manual">
+        <div id="firstInstanceMethodsPopover" class="animated-popover popover" popover="manual">
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
@@ -97,14 +110,14 @@
 
         <button id="show">Show the popover</button>
         <button id="hide">Hide the popover</button>
-        <div id="secondInstanceMethodsPopover" class="popover" popover="manual">
+        <div id="secondInstanceMethodsPopover" class="animated-popover popover" popover="manual">
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
         </div>
 
         <button id="hover">Hover over me</button>
-        <div id="thirdInstanceMethodsPopover" class="popover" popover="manual">
+        <div id="thirdInstanceMethodsPopover" class="animated-popover popover" popover="manual">
             <h2>Hover popover</h2>
         </div>
     </section>

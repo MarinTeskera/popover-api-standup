@@ -47,6 +47,18 @@ button {
     /* position-try-options: flip-block, flip-inline, flip-block flip-inline; */
     padding: 12px;
     margin: 10px;
+
+    &:popover-open {
+        @starting-style {
+            opacity: 0;
+        }
+
+        opacity: 1;
+    }
+
+    opacity: 0;
+
+    transition: opacity 0.2s, display 0.2s allow-discrete;
 }
 
 #anchor-button {
@@ -55,23 +67,17 @@ button {
 
 .animated-popover {
     &:popover-open {
-        /*  0. BEFORE-OPEN  */
         @starting-style {
-        transform: translateY(20px);
-        opacity: 0;
+            transform: translateY(20px);
+            opacity: 0;
         }
 
-        /*  1. OPEN STATE   */
         transform: translateY(0);
         opacity: 1;
     }
 
-    /*  2. EXIT STATE   */
     transform: translateY(-50px);
     opacity: 0;
 
-    /*  Transitioning properties + allow-discrete */
-    transition: transform 0.5s, 
-                opacity 0.5s, 
-                display 0.5s allow-discrete;
+    transition: transform 0.5s, opacity 0.5s, display 0.5s allow-discrete;
 }
