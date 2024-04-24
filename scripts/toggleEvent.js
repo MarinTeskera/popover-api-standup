@@ -1,5 +1,5 @@
-const popover = document.getElementById("toggleEventPopover");
-const indicator = document.getElementById("toggleEventPopoverIndicator");
+const popover = document.getElementById("toggle-event-popover");
+const indicator = document.getElementById("toggle-event-popover-indicator");
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {

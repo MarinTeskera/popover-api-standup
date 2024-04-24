@@ -14,8 +14,8 @@
     <section>
         <h2>Basic use</h2>
 
-        <button popovertarget="myBasicPopover">Toggle first popover</button>
-        <div id="myBasicPopover" class="popover" popover>
+        <button popovertarget="basic-popover">Toggle first popover</button>
+        <div id="basic-popover" class="popover" popover>
             <div class="popover-content">
                 <h2>First popover</h2>
                 <ul>
@@ -26,8 +26,8 @@
             </div>
         </div>
 
-        <button popovertarget="mySecondBasicPopover">Toggle second popover</button>
-        <div id="mySecondBasicPopover" class="popover" popover>
+        <button popovertarget="second-basic-popover">Toggle second popover</button>
+        <div id="second-basic-popover" class="popover" popover>
             <div class="popover-content">
                 <h2>Second popover</h2>
                 <ul>
@@ -42,8 +42,8 @@
     <section>
         <h2>Animation</h2>
 
-        <button popovertarget="animatedPopover">Toggle animated popover</button>
-        <div id="animatedPopover" class="animated-popover popover" popover>
+        <button popovertarget="animated-popover">Toggle animated popover</button>
+        <div id="animated-popover" class="animated-popover popover" popover>
             <div class="popover-content">
                 <h2>Animated popover</h2>
                 <ul>
@@ -58,9 +58,9 @@
     <section>
         <h2>Show/hide</h2>
 
-        <button popovertarget="myTogglePopover" popovertargetaction="show">Show popover</button>
-        <button popovertarget="myTogglePopover" popovertargetaction="hide">Hide popover</button>
-        <div id="myTogglePopover" class="animated-popover popover" popover>
+        <button popovertarget="toggle-popover" popovertargetaction="show">Show popover</button>
+        <button popovertarget="toggle-popover" popovertargetaction="hide">Hide popover</button>
+        <div id="toggle-popover" class="animated-popover popover" popover>
             <div class="popover-content">
                 <h2>Show/hide popover</h2>
                 <ul>
@@ -74,13 +74,13 @@
     <section>
         <h2>Manual</h2>
 
-        <button popovertarget="myManualPopover">Open manual popover</button>
-        <div id="myManualPopover" class="animated-popover popover" popover="manual">
+        <button popovertarget="manual-popover">Open manual popover</button>
+        <div id="manual-popover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <div class="close-button-container">
                     <button
                         class="close-button"
-                        popovertarget="myManualPopover"
+                        popovertarget="manual-popover"
                         popovertargetaction="hide">
                         <span aria-hidden=”true”>Close</span>
                     </button>
@@ -91,16 +91,16 @@
                     <li>It can also be set to <b>manual</b>, which disables light dismiss and enables popover nesting</li>
                 </ul>
 
-                <button popovertarget="mySecondManualPopover">Open the nested popover</button>
+                <button popovertarget="nested-popover">Open the nested popover</button>
             </div>
         </div>
 
-        <div id="mySecondManualPopover" class="animated-popover popover" popover="manual">
+        <div id="nested-popover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <div class="close-button-container">
                     <button
                         class="close-button"
-                        popovertarget="mySecondManualPopover"
+                        popovertarget="nested-popover"
                         popovertargetaction="hide">
                         <span aria-hidden=”true”>Close</span>
                     </button>
@@ -117,9 +117,9 @@
     <section>
         <h2>ToggleEvent</h2>
 
-        <button popovertarget="toggleEventPopover" popovertargetaction="toggle">Toggle the popover</button>
-        <span>This popover is currently <span id="toggleEventPopoverIndicator">closed</span></span>
-        <div id="toggleEventPopover" class="animated-popover popover" popover>
+        <button popovertarget="toggle-event-popover" popovertargetaction="toggle">Toggle the popover</button>
+        <span>This popover is currently <span id="toggle-event-popover-indicator">closed</span></span>
+        <div id="toggle-event-popover" class="animated-popover popover" popover>
             <div class="popover-content">
                 <h2>ToggleEvent popover</h2>
                 <ul>
@@ -135,7 +135,7 @@
         <h2>Instance methods</h2>
 
         <button id="toggle">Toggle popover</button>
-        <div id="firstInstanceMethodsPopover" class="animated-popover popover" popover="manual">
+        <div id="toggle-method-popover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <h2>Toggle popover</h2>
                 <ul>
@@ -146,7 +146,7 @@
 
         <button id="show">Show popover</button>
         <button id="hide">Hide popover</button>
-        <div id="secondInstanceMethodsPopover" class="animated-popover popover" popover="manual">
+        <div id="show-hide-method-popover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <h2>Show/hide popover</h2>
                 <ul>
@@ -157,7 +157,7 @@
         </div>
 
         <button id="hover">Hover over me</button>
-        <div id="thirdInstanceMethodsPopover" class="animated-popover popover" popover="manual">
+        <div id="hover-method-popover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <h2>Hover popover</h2>
                 <ul>
@@ -182,6 +182,16 @@
                 </ul>
             </div>
         </div>
+    </section>
+
+    <section>
+        <h2>Useful links</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">Popover API documentation</a></li>
+            <li><a href="https://www.youtube.com/watch?v=EB6dJTx9t54">Una Kravets - Better, Faster, Stronger Web UI</a></li>
+            <li><a href="https://anchor-tool.com/">Anchor position tool</a></li>
+            <li><a href="https://github.com/MarinTeskera/popover-api-standup">Github repository</a></li>
+        </ul>
     </section>
 
     <script type="module" src="./scripts/index.js"></script>

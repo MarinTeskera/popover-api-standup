@@ -1,16 +1,18 @@
+// Toggle button
+
 const toggleButton = document.getElementById("toggle");
-const firstInstanceMethodsPopover = document.getElementById(
-  "firstInstanceMethodsPopover"
-);
+const toggleMethodPopover = document.getElementById("toggle-method-popover");
 
 toggleButton.addEventListener("click", (event) => {
-  firstInstanceMethodsPopover.togglePopover();
+  toggleMethodPopover.togglePopover();
 });
+
+// Show/hide buttons
 
 const showButton = document.getElementById("show");
 const hideButton = document.getElementById("hide");
 const secondInstanceMethodsPopover = document.getElementById(
-  "secondInstanceMethodsPopover"
+  "show-hide-method-popover"
 );
 
 showButton.addEventListener("click", (event) => {
@@ -21,9 +23,11 @@ hideButton.addEventListener("click", (event) => {
   secondInstanceMethodsPopover.hidePopover();
 });
 
+// Hover button
+
 const hoverButton = document.getElementById("hover");
 const thirdInstanceMethodsPopover = document.getElementById(
-  "thirdInstanceMethodsPopover"
+  "hover-method-popover"
 );
 
 hoverButton.addEventListener("mouseover", (event) => {
