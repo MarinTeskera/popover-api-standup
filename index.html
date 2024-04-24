@@ -19,7 +19,7 @@
             <div class="popover-content">
                 <h2>First popover</h2>
                 <ul>
-                    <li>This div uses the CSS popover attribute</li>
+                    <li>This div uses the CSS <b>popover</b> attribute</li>
                     <li>It appears in the top layer (no need for z-index: 9999)</li>
                     <li>It is connected to a button or an input by adding the <b>popovertarget</b> attribute <br> to the button/input and passing it the popover's id</li>
                 </ul>
@@ -31,7 +31,7 @@
             <div class="popover-content">
                 <h2>Second popover</h2>
                 <ul>
-                    <li>This div uses the CSS popover attribute</li>
+                    <li>This div uses the CSS <b>popover</b> attribute</li>
                     <li>It appears in the top layer (no need for z-index: 9999)</li>
                     <li>It is connected to a button or an input by adding the <b>popovertarget</b> attribute <br> to the button/input and passing it the popover's id</li>
                 </ul>
@@ -49,21 +49,24 @@
                 <ul>
                     <li>Using popover's <b>:popover-open</b> state we can add animations to the popover itself</li>
                     <li>We can determine the element's style before animating in by using <b>@starting-style</b></li>
+                    <li><b>allow-discrete</b> allows us to animate to and from <b>display: none</b></li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Hide/show</h2>
+        <h2>Show/hide</h2>
 
-        <button popovertarget="myTogglePopover" popovertargetaction="show">Show the popover</button>
-        <button popovertarget="myTogglePopover" popovertargetaction="hide">Hide the popover</button>
+        <button popovertarget="myTogglePopover" popovertargetaction="show">Show popover</button>
+        <button popovertarget="myTogglePopover" popovertargetaction="hide">Hide popover</button>
         <div id="myTogglePopover" class="animated-popover popover" popover>
             <div class="popover-content">
-                <h2>Manual popover</h2>
-                <p>The popover attribute is set to manual</p>
-                <p>Allows nesting popovers</p>
+                <h2>Show/hide popover</h2>
+                <ul>
+                    <li>By setting a button's <b>popovertargetaction</b> attribute we can change how it interacts with the popover</li>
+                    <li>It is set to <b>toggle</b> by default, and the other 2 values are <b>show</b> and <b>hide</b></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -71,7 +74,7 @@
     <section>
         <h2>Manual</h2>
 
-        <button popovertarget="myManualPopover">Toggle the popover</button>
+        <button popovertarget="myManualPopover">Open manual popover</button>
         <div id="myManualPopover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <div class="close-button-container">
@@ -83,10 +86,12 @@
                     </button>
                 </div>
                 <h2>Manual popover</h2>
-                <p>The popover attribute is set to manual</p>
-                <p>Allows nesting popovers</p>
+                <ul>
+                    <li><b>popover</b> has a default value of <b>auto</b>, which enables it to use light dismiss by default</li>
+                    <li>It can also be set to <b>manual</b>, which disables light dismiss and enables popover nesting</li>
+                </ul>
 
-                <button popovertarget="mySecondManualPopover">Toggle the popover</button>
+                <button popovertarget="mySecondManualPopover">Open the nested popover</button>
             </div>
         </div>
 
@@ -101,8 +106,10 @@
                     </button>
                 </div>
 
-                <h2>Nested manual popover</h2>
-                <p>Nested inside the first manual popover</p>
+                <h2>Nested popover</h2>
+                <ul>
+                    <li>Nested inside the first manual popover</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -110,12 +117,16 @@
     <section>
         <h2>ToggleEvent</h2>
 
-        <button popovertarget="toggleEventPopover" popovertargetaction="toggle">This popover is currently <span id="toggleEventPopoverIndicator">closed</span></button>
+        <button popovertarget="toggleEventPopover" popovertargetaction="toggle">Toggle the popover</button>
+        <span>This popover is currently <span id="toggleEventPopoverIndicator">closed</span></span>
         <div id="toggleEventPopover" class="animated-popover popover" popover>
             <div class="popover-content">
                 <h2>ToggleEvent popover</h2>
-                <p>We are using ToggleEvent to read the popover's next state</p>
-                <p>This interface can be used with the beforetoggle and toggle events, which fire when the popover changes state</p>
+                <ul>
+                    <li>The <b>ToggleEvent</b> interface represents an event notifying the user when a popover element's state toggles between showing and hidden</li>
+                    <li>It provides us with <b>newState</b> and <b>oldState</b> which are strings with values of either <i>open</i> or <i>closed</i></li>
+                    <li>This interface can be used with the <b>beforetoggle</b> and <b>toggle</b> events, which fire when the popover changes state</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -126,19 +137,22 @@
         <button id="toggle">Toggle popover</button>
         <div id="firstInstanceMethodsPopover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
-                <h2>Manual popover</h2>
-                <p>The popover attribute is set to manual</p>
-                <p>Allows nesting popovers</p>
+                <h2>Toggle popover</h2>
+                <ul>
+                    <li>Using the <b>togglePopover()</b> method on an HTMLElement which has a valid popover attribute toggles the popover</li>
+                </ul>
             </div>
         </div>
 
-        <button id="show">Show the popover</button>
-        <button id="hide">Hide the popover</button>
+        <button id="show">Show popover</button>
+        <button id="hide">Hide popover</button>
         <div id="secondInstanceMethodsPopover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
-                <h2>Manual popover</h2>
-                <p>The popover attribute is set to manual</p>
-                <p>Allows nesting popovers</p>
+                <h2>Show/hide popover</h2>
+                <ul>
+                    <li>Using the <b>showPopover()</b> method on an HTMLElement which has a valid popover attribute opens the popover</li>
+                    <li>Using the <b>hidePopover()</b> method on an HTMLElement which has a valid popover attribute opens the popover</li>
+                </ul>
             </div>
         </div>
 
@@ -146,6 +160,10 @@
         <div id="thirdInstanceMethodsPopover" class="animated-popover popover" popover="manual">
             <div class="popover-content">
                 <h2>Hover popover</h2>
+                <ul>
+                    <li>Using a combination of <b>showPopover()</b> and <b>hidePopover()</b> we can show a popover when hovering over an input</li>
+                    <li>Note that the <b>popover</b> attribute is set to <i>manual</i> to disable light dismiss when clicking the button</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -155,7 +173,13 @@
         <button id="anchor-button" popovertarget="tooltip">Anchor button</button>
         <div id="tooltip" popover="manual" class="popover tooltip">
             <div class="popover-content">
-                Tooltip
+                <h2>Popover tooltip</h2>
+                <ul>
+                    <li>By assigning an <b>anchor-name</b> to a button we can make it an anchor</li>
+                    <li>By adding <b>position-anchor</b> to a popover we connect it to the anchor</li>
+                    <li>By setting in <b>inset-area</b> we determine the popover's position in relation to the anchor</li>
+                    <li>If <b>inset-area</b> is set to <i>top</i> or <i>bottom</i> the width of the tooltip matches the width of the input</li>
+                </ul>
             </div>
         </div>
     </section>

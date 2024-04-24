@@ -71,15 +71,15 @@ li {
 
 #anchor-button {
     anchor-name: --tooltip;
+    /* margin: 12px 100px; */
 }
 
 .tooltip {
-    padding: 12px;
+    padding: 8px;
     margin: 10px;
 
-    view-transition-name: tooltip;
     position-anchor: --tooltip;
-    inset-area: top;
+    inset-area: right span-top;
     /* position-try-options: flip-block, flip-inline, flip-block flip-inline; */
 
     &:popover-open {

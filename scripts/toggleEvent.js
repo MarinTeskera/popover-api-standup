@@ -10,7 +10,7 @@ popover.addEventListener("beforetoggle", (event) => {
 });
 
 // popover.addEventListener("toggle", (event) => {
-//   if (event.newState === "closed") {
+//   if (event.oldState === "closed") {
 //     indicator.innerText = "open";
 //   } else {
 //     indicator.innerText = "closed";
