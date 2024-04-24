@@ -15,14 +15,14 @@
         <h2>Basic use</h2>
 
         <button popovertarget="myBasicPopover">Toggle first popover</button>
-        <div id="myBasicPopover" popover>
+        <div id="myBasicPopover" class="popover" popover>
             <h2>Popover element</h2>
             <p>This div uses the CSS popover attribute</p>
             <p>It appears in the top layer (no need for z-index: 9999)</p>
         </div>
 
         <button popovertarget="mySecondBasicPopover">Toggle second popover</button>
-        <div id="mySecondBasicPopover" popover>
+        <div id="mySecondBasicPopover" class="popover" popover>
             <h2>Second popover element</h2>
             <p>This div uses the CSS popover attribute</p>
             <p>It appears in the top layer (no need for z-index: 9999)</p>
@@ -34,7 +34,7 @@
 
         <button popovertarget="myTogglePopover" popovertargetaction="show">Show the popover</button>
         <button popovertarget="myTogglePopover" popovertargetaction="hide">Hide the popover</button>
-        <div id="myTogglePopover" popover>
+        <div id="myTogglePopover" class="popover" popover>
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
@@ -45,12 +45,15 @@
         <h2>Manual</h2>
 
         <button popovertarget="myManualPopover">Toggle the popover</button>
-        <div id="myManualPopover" popover="manual">
-            <button
-                popovertarget="myManualPopover"
-                popovertargetaction="hide">
-                <span aria-hidden=”true”>❌</span>
-            </button>
+        <div id="myManualPopover" class="popover" popover="manual">
+            <div class="close-button-container">
+                <button
+                    class="close-button"
+                    popovertarget="myManualPopover"
+                    popovertargetaction="hide">
+                    <span aria-hidden=”true”>Close</span>
+                </button>
+            </div>
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
@@ -58,11 +61,12 @@
             <button popovertarget="mySecondManualPopover">Toggle the popover</button>
         </div>
 
-        <div id="mySecondManualPopover" popover="manual">
+        <div id="mySecondManualPopover" class="popover" popover="manual">
             <button
+                class="close-button"
                 popovertarget="mySecondManualPopover"
                 popovertargetaction="hide">
-                <span aria-hidden=”true”>❌</span>
+                <span aria-hidden=”true”>Close</span>
             </button>
 
             <h2>Nested manual popover</h2>
@@ -74,7 +78,7 @@
         <h2>ToggleEvent</h2>
 
         <button popovertarget="toggleEventPopover" popovertargetaction="toggle">This popover is currently <span id="toggleEventPopoverIndicator">closed</span></button>
-        <div id="toggleEventPopover" popover>
+        <div id="toggleEventPopover" class="popover" popover>
             <h2>ToggleEvent popover</h2>
             <p>We are using ToggleEvent to read the popover's next state</p>
             <p>This interface can be used with the beforetoggle and toggle events, which fire when the popover changes state</p>
@@ -85,7 +89,7 @@
         <h2>Instance methods</h2>
 
         <button id="toggle">Toggle popover</button>
-        <div id="firstInstanceMethodsPopover" popover="manual">
+        <div id="firstInstanceMethodsPopover" class="popover" popover="manual">
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
@@ -93,17 +97,24 @@
 
         <button id="show">Show the popover</button>
         <button id="hide">Hide the popover</button>
-        <div id="secondInstanceMethodsPopover" popover="manual">
+        <div id="secondInstanceMethodsPopover" class="popover" popover="manual">
             <h2>Manual popover</h2>
             <p>The popover attribute is set to manual</p>
             <p>Allows nesting popovers</p>
         </div>
 
         <button id="hover">Hover over me</button>
-        <div id="thirdInstanceMethodsPopover" popover="manual">
+        <div id="thirdInstanceMethodsPopover" class="popover" popover="manual">
             <h2>Hover popover</h2>
         </div>
     </section>
+
+    <section>
+        <h2>Anchor</h2>
+        <button id="anchor-button" popovertarget="tooltip">Anchor button</button>
+        <div id="tooltip" popover="manual" class="popover tooltip">Tooltip</div>
+    </section>
+
     <script type="module" src="./scripts/index.js"></script>
 </body>
 

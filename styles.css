@@ -1,8 +1,77 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+body {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    padding: 25px;
+    padding-top: 0;
+}
+
 .header {
     display: flex;
     justify-content: center;
 }
 
 button {
+    border: none;
+    background-color: rgb(216, 38, 44);
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-family: neue-haas-grotesk-text, Arial, sans-serif;
+    padding: 12px 24px;
+    line-height: 18.4px;
+    box-sizing: border-box;
+    margin-right: 12px;
+}
+
+.close-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-button {
+    padding: 6px 12px;
+    margin: 0;
+}
+
+.popover {
+    border: red 5px solid;
+    border-radius: 25px;
+    padding: 25px;
+    padding-top: 12px;
+}
+
+.tooltip {
+    view-transition-name: tooltip;
+    position-anchor: --tooltip;
+    inset-area: top;
+    /* position-try-options: flip-block, flip-inline, flip-block flip-inline; */
+    padding: 12px;
     margin: 10px;
+}
+
+#anchor-button {
+    anchor-name: --tooltip;
+}
+
+.animated-popover {
+    &:popover-open {
+        /*  0. BEFORE-OPEN  */
+        @starting-style {
+        transform: translateY(20px);
+        opacity: 0;
+        }
+
+        /*  1. OPEN STATE   */
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /*  2. EXIT STATE   */
+    transform: translateY(-50px);
+    opacity: 0;
+
+    /*  Transitioning properties + allow-discrete */
+    transition: transform 0.5s, 
+                opacity 0.5s, 
+                display 0.5s allow-discrete;
 }
