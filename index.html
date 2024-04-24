@@ -17,18 +17,24 @@
         <button popovertarget="myBasicPopover">Toggle first popover</button>
         <div id="myBasicPopover" class="popover" popover>
             <div class="popover-content">
-                <h2>Popover element</h2>
-                <p>This div uses the CSS popover attribute</p>
-                <p>It appears in the top layer (no need for z-index: 9999)</p>
+                <h2>First popover</h2>
+                <ul>
+                    <li>This div uses the CSS popover attribute</li>
+                    <li>It appears in the top layer (no need for z-index: 9999)</li>
+                    <li>It is connected to a button or an input by adding the <b>popovertarget</b> attribute <br> to the button/input and passing it the popover's id</li>
+                </ul>
             </div>
         </div>
 
         <button popovertarget="mySecondBasicPopover">Toggle second popover</button>
         <div id="mySecondBasicPopover" class="popover" popover>
             <div class="popover-content">
-                <h2>Second popover element</h2>
-                <p>This div uses the CSS popover attribute</p>
-                <p>It appears in the top layer (no need for z-index: 9999)</p>
+                <h2>Second popover</h2>
+                <ul>
+                    <li>This div uses the CSS popover attribute</li>
+                    <li>It appears in the top layer (no need for z-index: 9999)</li>
+                    <li>It is connected to a button or an input by adding the <b>popovertarget</b> attribute <br> to the button/input and passing it the popover's id</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -40,8 +46,10 @@
         <div id="animatedPopover" class="animated-popover popover" popover>
             <div class="popover-content">
                 <h2>Animated popover</h2>
-                <p>This div uses the CSS popover attribute</p>
-                <p>It appears in the top layer (no need for z-index: 9999)</p>
+                <ul>
+                    <li>Using popover's <b>:popover-open</b> state we can add animations to the popover itself</li>
+                    <li>We can determine the element's style before animating in by using <b>@starting-style</b></li>
+                </ul>
             </div>
         </div>
     </section>

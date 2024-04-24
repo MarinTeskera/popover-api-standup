@@ -18,13 +18,17 @@ button {
     margin-right: 12px;
 }
 
+li {
+    margin-bottom: 12px;
+}
+
 .header {
     display: flex;
     justify-content: center;
 }
 
 .popover {
-    border: red 5px solid;
+    border: rgb(216, 38, 44) 5px solid;
     border-radius: 25px;
     padding: 25px;
     padding-top: 12px;
@@ -65,13 +69,18 @@ button {
     margin: 0;
 }
 
+#anchor-button {
+    anchor-name: --tooltip;
+}
+
 .tooltip {
+    padding: 12px;
+    margin: 10px;
+
     view-transition-name: tooltip;
     position-anchor: --tooltip;
     inset-area: top;
     /* position-try-options: flip-block, flip-inline, flip-block flip-inline; */
-    padding: 12px;
-    margin: 10px;
 
     &:popover-open {
         @starting-style {
@@ -86,6 +95,3 @@ button {
     transition: opacity 0.2s, display 0.2s allow-discrete;
 }
 
-#anchor-button {
-    anchor-name: --tooltip;
-}
