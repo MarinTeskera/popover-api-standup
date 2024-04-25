@@ -41,6 +41,10 @@ li {
     flex-direction: column;
 }
 
+#second-basic-popover::backdrop {
+    backdrop-filter: blur(2px)
+}
+
 .animated-popover {
     &:popover-open {
         @starting-style {
