@@ -41,6 +41,17 @@ li {
     flex-direction: column;
 }
 
+.close-button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.close-button {
+    padding: 6px 12px;
+    margin: 0;
+}
+
 #blur-popover::backdrop {
     backdrop-filter: blur(2px)
 }
@@ -60,17 +71,6 @@ li {
     opacity: 0;
 
     transition: transform 0.5s, opacity 0.5s, display 0.5s allow-discrete;
-}
-
-.close-button-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.close-button {
-    padding: 6px 12px;
-    margin: 0;
 }
 
 #anchor-button {

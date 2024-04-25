@@ -36,8 +36,8 @@
             <div class="popover-content">
                 <h2>Blur popover</h2>
                 <ul>
-                    <li>Since it's rendered in the top layer, a <b>::backdrop</b> pseudo-element is rendered behind it</li>
-                    <li>We can use that to for example, blur tha background</li>
+                    <li>Since a popover is rendered in the top layer, a <b>::backdrop</b> pseudo-element is rendered behind it</li>
+                    <li>We can use that to blur tha background for example</li>
                 </ul>
             </div>
         </div>
@@ -69,7 +69,7 @@
                 <h2>Show/hide popover</h2>
                 <ul>
                     <li>By setting a button's <b>popovertargetaction</b> attribute we can change how it interacts with the popover</li>
-                    <li>It is set to <b>toggle</b> by default, and the other 2 values are <b>show</b> and <b>hide</b></li>
+                    <li>It is set to <i>toggle</i> by default, and the other 2 values are <i>show</i> and <i>hide</i></li>
                 </ul>
             </div>
         </div>
@@ -91,8 +91,8 @@
                 </div>
                 <h2>Manual popover</h2>
                 <ul>
-                    <li><b>popover</b> has a default value of <b>auto</b>, which enables it to use light dismiss by default</li>
-                    <li>It can also be set to <b>manual</b>, which disables light dismiss and enables popover nesting</li>
+                    <li><b>popover</b> has a default value of <i>auto</i>, which enables it to use light dismiss by default</li>
+                    <li>It can also be set to <i>manual</i>, which disables light dismiss and enables popover nesting</li>
                 </ul>
 
                 <button popovertarget="nested-popover">Open the nested popover</button>
@@ -181,7 +181,7 @@
                 <ul>
                     <li>By assigning an <b>anchor-name</b> to a button we can make it an anchor</li>
                     <li>By adding <b>position-anchor</b> to a popover we connect it to the anchor</li>
-                    <li>By setting in <b>inset-area</b> we determine the popover's position in relation to the anchor</li>
+                    <li>By setting an <b>inset-area</b> we determine the popover's position in relation to the anchor</li>
                     <li>If <b>inset-area</b> is set to <i>top</i> or <i>bottom</i> the width of the tooltip matches the width of the input</li>
                 </ul>
             </div>
