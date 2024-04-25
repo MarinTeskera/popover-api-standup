@@ -15,7 +15,7 @@
     <section>
         <h2>Basic use</h2>
 
-        <button popovertarget="basic-popover">Toggle first popover</button>
+        <button popovertarget="basic-popover">Basic popover</button>
         <div id="basic-popover" class="popover" popover>
             <div class="popover-content">
                 <h2>First popover</h2>
@@ -23,20 +23,21 @@
                     <li>This div uses the CSS <b>popover</b> attribute</li>
                     <li>It appears in the top layer (no need for z-index: 9999)</li>
                     <li>It is connected to a button or an input by adding the <b>popovertarget</b> attribute <br> to the button/input and passing it the popover's id</li>
-                    <li>Since it's rendered in the top layer, a <b>::backdrop</b> pseudo-element is rendered behind it</li>
                 </ul>
             </div>
         </div>
+    </section>
 
-        <button popovertarget="second-basic-popover">Toggle second popover</button>
-        <div id="second-basic-popover" class="popover" popover>
+    <section>
+        <h2>Backdrop</h2>
+
+        <button popovertarget="blur-popover">Toggle blur popover</button>
+        <div id="blur-popover" class="popover" popover>
             <div class="popover-content">
-                <h2>Second popover</h2>
+                <h2>Blur popover</h2>
                 <ul>
-                    <li>This div uses the CSS <b>popover</b> attribute</li>
-                    <li>It appears in the top layer (no need for z-index: 9999)</li>
-                    <li>It is connected to a button or an input by adding the <b>popovertarget</b> attribute <br> to the button/input and passing it the popover's id</li>
                     <li>Since it's rendered in the top layer, a <b>::backdrop</b> pseudo-element is rendered behind it</li>
+                    <li>We can use that to for example, blur tha background</li>
                 </ul>
             </div>
         </div>

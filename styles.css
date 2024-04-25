@@ -41,7 +41,7 @@ li {
     flex-direction: column;
 }
 
-#second-basic-popover::backdrop {
+#blur-popover::backdrop {
     backdrop-filter: blur(2px)
 }
 
